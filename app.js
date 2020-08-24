@@ -87,7 +87,7 @@ const fetchPokeData = id => {
 
       pokeName.textContent = capitalize(data['name']);
       pokeId.textContent = '#'+data['id'].toString().padStart(3, '0');
-      pokeWeight.textContent = data['weight'];
+      pokeWeight.textContent = data['weight'] + " lbs";
       pokeHeight.textContent = data['height'];
 
 
@@ -136,4 +136,5 @@ for(const pokeListItem of pokeListItems){
   pokeListItem.addEventListener('click', handleListItemClick)
 }
 // initialize app
+
 fetchPokeList('https://pokeapi.co/api/v2/pokemon?offset=0&limit=20')
